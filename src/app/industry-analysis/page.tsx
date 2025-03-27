@@ -130,19 +130,21 @@ const mockColumns: DataColumn[] = [
   { 
     id: 'revenue',
   header: '营收(亿元)',
+  {
   accessor: 'revenue',
+  header: '营收(亿元)',
   align: 'right',
   format: (value) => {
-  const num = typeof value === 'number'
-    ? value
-    : typeof value === 'string'
-      ? parseFloat(value)
-      : NaN;
+    const num = typeof value === 'number'
+      ? value
+      : typeof value === 'string'
+        ? parseFloat(value)
+        : NaN;
 
-  return isNaN(num) ? '-' : num.toFixed(2);
-}
-
+    return isNaN(num) ? '-' : num.toFixed(2);
+  }
 },
+
 {
   id: 'growth',
   header: '同比增长',
