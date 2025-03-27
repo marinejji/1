@@ -133,14 +133,15 @@ const mockColumns: DataColumn[] = [
   accessor: 'revenue',
   align: 'right',
   format: (value) => {
-    const num = typeof value === 'number' 
-      ? value 
-      : typeof value === 'string' 
-        ? parseFloat(value) 
-        : NaN;
+  const num = typeof value === 'number'
+    ? value
+    : typeof value === 'string'
+      ? parseFloat(value)
+      : NaN;
 
-    return isNaN(num) ? '-' : num.toFixed(2);
-  }
+  return isNaN(num) ? '-' : num.toFixed(2);
+}
+
 },
 {
   id: 'growth',
